@@ -35,7 +35,8 @@
     <main>
         <section class="flex justify-center main-section mx-auto py-20">
             <div class="grid grid-cols-3 gap-1 place-items-centeplace-items-cente">
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -50,7 +51,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -65,7 +67,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -80,7 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -95,7 +99,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -110,7 +115,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
+                <div
+                    class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/Lionel_Messi.png" alt="">
                     <div class="p-5">
                         <h5 class="mb-2 text-3xl font-bold text-white uppercase text-center">
@@ -126,13 +132,14 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-rows-2 gap-1">
-                <div class="bg-black p-6 mb-4 w-9/12">
+
+            <div class="flex flex-col">
+                <div class="bg-black h-min p-6 mb-4 w-10/12">
                     <div>
                         <h4 class="text-2xl font-bold text-center text-white">Selected - V</h4>
                         <img class="w-3/5 mx-auto" src="images/heding_underline.png" alt="">
                     </div>
-                    <div class="text-white text-xl px-6 pt-5 pb-4">
+                    <div class="text-white text-center text-xl px-6 pt-5 pb-4">
                         <ol class="list-decimal">
                             <li>Not Selected Yet</li>
                             <li>Not Selected Yet</li>
@@ -142,20 +149,69 @@
                         </ol>
                     </div>
                 </div>
-                <div class="bg-black p-6 mb-4 w-9/12">
+                <div class="bg-black p-6 mb-4 w-10/12">
                     <div>
                         <h4 class="text-2xl font-bold text-center text-white">Budget</h4>
                         <img class="w-3/5 mx-auto" src="images/heding_underline.png" alt="">
                     </div>
+                    <div class="my-4">
+                        <div class="flex">
+                            <label class="text-gray-400 text-lg flex items-center mr-auto" for="perPlayer">Per
+                                Player</label>
+                            <input id="perPlayer" class="border text-white border-white bg-black w-7/12 p-2"
+                                type="text">
+                        </div>
+                    </div>
                     <div>
-                        <label for="perPlayer"></label>
-                        <input id="perPlayer" class="border border-white bg-black" type="text">
+                        <button
+                            class="items-center py-2 px-20 text-1xl font-medium text-center text-white bg-blue-700 hover:bg-blue-800 mb-4">
+                            <span class="px-1">Calculate</span>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="flex">
+                            <p class="text-gray-400 text-lg mr-auto">Player Expenses</p>
+                            <p class="text-white text-lg text-left">$<span>0000</span></p>
+                        </div>
+                        <div class="my-4">
+                            <div class="flex">
+                                <label class="text-gray-400 text-lg flex items-center mr-auto"
+                                    for="perPlayer">Manager</label>
+                                <input id="perPlayer" class="border text-white border-white bg-black w-7/12 p-2"
+                                    type="text">
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="flex">
+                                <label class="text-gray-400 text-lg flex items-center mr-auto"
+                                    for="perPlayer">Coach</label>
+                                <input id="perPlayer" class="border text-white border-white bg-black w-7/12 p-2"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="items-center uppercase py-2 px-12 text-1xl font-medium text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-4">
+                            Calculate Total
+                        </button>
+                        <div class="flex">
+                            <p class="text-amber-600 text-lg mr-auto font-bold">Player Expenses</p>
+                            <p class="text-white text-lg text-left">$<span>0000</span></p>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <section class="main-section">
+            <hr>
+            <h2 class="text-white text-center pt-10 pb-10">Copyright @ 2022 All Rights Reserved.</h2>
+        </section>
+    </footer>
 
 </body>
 
