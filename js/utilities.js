@@ -45,16 +45,26 @@ function worngInputMsgClose() {
 function getValueFromInputField(inputId) {
     const valueString = document.getElementById(inputId).value;
     const inputValue = parseFloat(valueString);
-    if (valueString === '' || isNaN(inputValue)) {
-        worngInputMsgShow();
-    }
-    else {
-        worngInputMsgClose();
-        return inputValue;
-    }
+    return inputValue;
+}
+
+function getValueFromTextField(inputId) {
+    const valueString = document.getElementById(inputId).innerText;
+    const inputValue = parseFloat(valueString);
+    return inputValue;
 }
 
 function setValueInTextField(inputId, newText) {
     let getField = document.getElementById(inputId);
-    getField.innerText = newText;
+    if (isNaN(newText)){
+        getField.innerText = '0000';
+        worngInputMsgShow();
+    }
+    else if (newText === 0){
+        getField.innerText = '0000';
+    }
+    else{
+        getField.innerText = newText;
+        worngInputMsgClose();
+    }
 }

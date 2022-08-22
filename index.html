@@ -17,7 +17,7 @@
             <img class="w-3/12" src="images/header_player.png" alt="">
             <div class="my-auto">
                 <h6 class="text-7xl font-bold text-center header-text align-middle v items-center">Pick Five Best
-                    Football<br>
+                    PSG<br>
                     Players Of Your Choice</h6>
                 <img src="" alt="">
                 <img class="w-4/12 mx-auto mr-0 mt-2" src="images/header_underline.png" alt="">
@@ -179,6 +179,20 @@
                         <h4 class="text-2xl font-bold text-center text-white">Budget</h4>
                         <img class="w-3/5 mx-auto" src="images/heding_underline.png" alt="">
                     </div>
+                    <div id="worngInputMsg"
+                    class="bg-red-100 mt-4 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6 hidden"
+                    role="alert">
+                    <strong id="msg1" class="font-bold">Wrong Input!</strong><br>
+                    <span id="msg2" class="block sm:inline">Please Check Your Input.</span>
+                    <span id="worrningClose" class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                        <svg class="fill-current h-6 w-6 text-red-500" role="button"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <title>Close</title>
+                            <path
+                                d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                        </svg>
+                    </span>
+                </div>
                     <div class="my-4">
                         <div class="flex">
                             <label class="text-gray-400 text-lg flex items-center mr-auto" for="perPlayer">Per
@@ -187,24 +201,11 @@
                                 type="text">
                         </div>
                     </div>
-                    <div id="worngInputMsg"
-                            class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6 hidden"
-                            role="alert">
-                            <strong id="msg1" class="font-bold">Wrong Input!</strong><br>
-                            <span id="msg2" class="block sm:inline">Please Check Your Input.</span>
-                            <span id="worrningClose" class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                                <svg class="fill-current h-6 w-6 text-red-500" role="button"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <title>Close</title>
-                                    <path
-                                        d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-                                </svg>
-                            </span>
-                        </div>
+
                     <div>
                         <button id="calculateBtn"
-                            class="items-center py-2 px-20 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 mb-4">
-                            <span class="px-1">Calculate</span>
+                            class="items-center uppercase py-2 px-16 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 mb-4">
+                            <span class="px-2.5">Calculate</span>
                         </button>
                     </div>
                     <div>
@@ -215,28 +216,28 @@
                         <div class="my-4">
                             <div class="flex">
                                 <label class="text-gray-400 text-lg flex items-center mr-auto"
-                                    for="perPlayer">Manager</label>
-                                <input id="perPlayer" class="border text-white border-white bg-black w-7/12 p-2"
+                                    for="managerCost">Manager</label>
+                                <input id="managerCost" class="border text-white border-white bg-black w-7/12 p-2"
                                     type="text">
                             </div>
                         </div>
                         <div class="my-4">
                             <div class="flex">
                                 <label class="text-gray-400 text-lg flex items-center mr-auto"
-                                    for="perPlayer">Coach</label>
-                                <input id="perPlayer" class="border text-white border-white bg-black w-7/12 p-2"
+                                    for="coachCost">Coach</label>
+                                <input id="coachCost" class="border text-white border-white bg-black w-7/12 p-2"
                                     type="text">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <button
+                        <button id="totalCostBtn"
                             class="items-center uppercase py-2 px-12 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-4">
                             Calculate Total
                         </button>
                         <div class="flex">
                             <p class="text-amber-600 text-lg mr-auto font-bold">Player Expenses</p>
-                            <p class="text-white text-lg text-left">$<span>0000</span></p>
+                            <p class="text-white text-lg text-left">$<span id="totalCost">0000</span></p>
                         </div>
                     </div>
                 </div>
