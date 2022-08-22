@@ -28,6 +28,21 @@ document.getElementById('playerBtn6').addEventListener('click', function () {
     setPlayerName(playerName, 'playerBtn6');
 })
 
+document.getElementById('playerBtn7').addEventListener('click', function () {
+    const playerName = getPlaayerName('playerName7');
+    setPlayerName(playerName, 'playerBtn7');
+})
+
+document.getElementById('playerBtn8').addEventListener('click', function () {
+    const playerName = getPlaayerName('playerName8');
+    setPlayerName(playerName, 'playerBtn8');
+})
+
+document.getElementById('playerBtn9').addEventListener('click', function () {
+    const playerName = getPlaayerName('playerName9');
+    setPlayerName(playerName, 'playerBtn9');
+})
+
 document.getElementsByClassName('alretClose')[0].addEventListener('click', function () {
     alertMsgClose();
 })
