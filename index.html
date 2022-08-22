@@ -33,8 +33,8 @@
     </header>
 
     <main>
-        <section class="flex justify-center main-section mx-auto py-20">
-            <div class="player-list grid grid-cols-3 gap-1 place-items-centeplace-items-cente">
+        <section class="xl:flex md:flex  justify-center main-section py-20">
+            <div class="player-list grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-1 place-items-centeplace-items-cente">
                 <div
                     class="w-min h-min bg-black border border-gray-200 shadow-md dark:bg-gray-800 border-gray-600 mr-4 mb-4">
                     <img class="" src="images/player1.png" alt="">
@@ -128,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col place-items-center">
                 <div class="bg-black h-min p-6 mb-4 w-10/12">
                     <div>
                         <h4 class="text-2xl font-bold text-center text-white">Selected - V</h4>
@@ -204,7 +204,7 @@
 
                     <div>
                         <button id="calculateBtn"
-                            class="items-center uppercase py-2 px-16 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 mb-4">
+                            class="items-center uppercase py-2 px-16 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-4">
                             <span class="px-2.5">Calculate</span>
                         </button>
                     </div>
