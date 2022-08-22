@@ -15,7 +15,6 @@ function alertMsgClose() {
 
 function setPlayerName(playerName, btnId) {
     const playerNumber = document.querySelectorAll('#playerList li');
-    console.log(playerNumber.length);
     if (playerNumber.length <= 4) {
         const msgElementt = document.getElementById('noPlayerListMsg');
         msgElementt.classList.add('hidden');
@@ -31,4 +30,31 @@ function setPlayerName(playerName, btnId) {
     else {
         alertMsgShow();
     }
+}
+
+function worngInputMsgShow() {
+    const element = document.getElementById('worngInputMsg');
+    element.classList.remove('hidden');
+}
+
+function worngInputMsgClose() {
+    const element = document.getElementById('worngInputMsg');
+    element.classList.add('hidden');
+}
+
+function getValueFromInputField(inputId) {
+    const valueString = document.getElementById(inputId).value;
+    const inputValue = parseFloat(valueString);
+    if (valueString === '' || isNaN(inputValue)) {
+        worngInputMsgShow();
+    }
+    else {
+        worngInputMsgClose();
+        return inputValue;
+    }
+}
+
+function setValueInTextField(inputId, newText) {
+    let getField = document.getElementById(inputId);
+    getField.innerText = newText;
 }
