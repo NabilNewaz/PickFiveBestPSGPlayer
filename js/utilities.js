@@ -44,8 +44,13 @@ function worngInputMsgClose() {
 
 function getValueFromInputField(inputId) {
     const valueString = document.getElementById(inputId).value;
-    const inputValue = parseFloat(valueString);
-    return inputValue;
+    if (!/\D/.test(valueString)) {
+        const inputValue = parseFloat(valueString);
+        return inputValue;
+    }
+    else {
+        worngInputMsgShow();
+    }
 }
 
 function getValueFromTextField(inputId) {
@@ -56,14 +61,14 @@ function getValueFromTextField(inputId) {
 
 function setValueInTextField(inputId, newText) {
     let getField = document.getElementById(inputId);
-    if (isNaN(newText)){
+    if (isNaN(newText)) {
         getField.innerText = '0000';
         worngInputMsgShow();
     }
-    else if (newText === 0){
+    else if (newText === 0) {
         getField.innerText = '0000';
     }
-    else{
+    else {
         getField.innerText = newText;
         worngInputMsgClose();
     }
