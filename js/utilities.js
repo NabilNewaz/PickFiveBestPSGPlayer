@@ -17,12 +17,14 @@ function setPlayerName(playerName, disableBtnId) {
         selectBtnDisable(disableBtnId);
     }
     else {
-        alertMsgShow();
+        alertMsgShow('Already 5 Player Added! You Are Not Allow To Add More Player.');
     }
 }
 
-function alertMsgShow() {
+function alertMsgShow(alartMsg) {
     const element = document.getElementById('alertMsg');
+    const alertMsgElement = document.getElementById('alartMsg');
+    alertMsgElement.innerText = alartMsg;
     element.classList.remove('hidden');
 }
 

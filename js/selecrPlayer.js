@@ -4,6 +4,7 @@ for (const player of players) {
         const playerSelectBtn = event.target;
         const playerName = playerSelectBtn.parentNode.parentNode.children[0].innerText;
         setPlayerName(playerName, playerSelectBtn);
+        setValueInTextField('totalPlayerCost', 0)
     })
 }
 
