@@ -1,6 +1,23 @@
-function getPlaayerName(elementId) {
-    const playerName = document.getElementById(elementId).innerText;
-    return playerName;
+
+function setPlayerName(playerName) {
+    const playerNumber = document.querySelectorAll('#playerList li');
+    if (playerNumber.length <= 4) {
+        const msgElementt = document.getElementById('noPlayerListMsg');
+        msgElementt.classList.add('hidden');
+        const ul = document.getElementById('playerList');
+        const li = document.createElement('li');
+        li.innerText = playerName;
+        ul.appendChild(li);
+    }
+    else {
+        alertMsgShow();
+    }
+}
+
+function selectBtnDisable(btnId) {
+    btnId.classList.remove('buton-color', 'hover:bg-blue-900');
+    btnId.classList.add('cursor-not-allowed', 'bg-gray-500');
+    btnId.disabled = 'true';
 }
 
 function alertMsgShow() {
@@ -11,25 +28,6 @@ function alertMsgShow() {
 function alertMsgClose() {
     const element = document.getElementById('alertMsg');
     element.classList.add('hidden');
-}
-
-function setPlayerName(playerName, btnId) {
-    const playerNumber = document.querySelectorAll('#playerList li');
-    if (playerNumber.length <= 4) {
-        const msgElementt = document.getElementById('noPlayerListMsg');
-        msgElementt.classList.add('hidden');
-        const ul = document.getElementById('playerList');
-        const li = document.createElement('li');
-        li.innerText = playerName;
-        ul.appendChild(li);
-        const btnDisable = document.getElementById(btnId);
-        btnDisable.classList.remove('buton-color', 'hover:bg-blue-900');
-        btnDisable.classList.add('cursor-not-allowed', 'bg-gray-500');
-        btnDisable.disabled = 'true';
-    }
-    else {
-        alertMsgShow();
-    }
 }
 
 function worngInputMsgShow() {
