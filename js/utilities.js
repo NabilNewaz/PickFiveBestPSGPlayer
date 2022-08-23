@@ -1,5 +1,11 @@
 
-function setPlayerName(playerName) {
+function selectBtnDisable(btnId) {
+    btnId.classList.remove('buton-color', 'hover:bg-blue-900');
+    btnId.classList.add('cursor-not-allowed', 'bg-gray-500');
+    btnId.disabled = 'true';
+}
+
+function setPlayerName(playerName, disableBtnId) {
     const playerNumber = document.querySelectorAll('#playerList li');
     if (playerNumber.length <= 4) {
         const msgElementt = document.getElementById('noPlayerListMsg');
@@ -8,16 +14,11 @@ function setPlayerName(playerName) {
         const li = document.createElement('li');
         li.innerText = playerName;
         ul.appendChild(li);
+        selectBtnDisable(disableBtnId);
     }
     else {
         alertMsgShow();
     }
-}
-
-function selectBtnDisable(btnId) {
-    btnId.classList.remove('buton-color', 'hover:bg-blue-900');
-    btnId.classList.add('cursor-not-allowed', 'bg-gray-500');
-    btnId.disabled = 'true';
 }
 
 function alertMsgShow() {

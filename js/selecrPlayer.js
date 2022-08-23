@@ -2,9 +2,8 @@ const players = document.getElementsByClassName('playerBtn');
 for (const player of players) {
     player.addEventListener('click', function (event) {
         const playerSelectBtn = event.target;
-        selectBtnDisable(playerSelectBtn);
         const playerName = playerSelectBtn.parentNode.parentNode.children[0].innerText;
-        setPlayerName(playerName);
+        setPlayerName(playerName, playerSelectBtn);
     })
 }
 
